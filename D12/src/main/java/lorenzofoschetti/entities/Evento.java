@@ -3,7 +3,7 @@ package lorenzofoschetti.entities;
 
 import jakarta.persistence.*;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 @Entity
 @Table(name = "eventi")
@@ -15,7 +15,7 @@ public class Evento {
     @Column(name = "titolo")
     private String titolo;
     @Column(name = "dataevento")
-    private Date dataEvento;
+    private LocalDate dataEvento;
     @Column(name = "descrizione")
     private String descrizione;
     @Column(name = "tipoevento")
@@ -27,7 +27,7 @@ public class Evento {
     public Evento() {
     }
 
-    public Evento(String titolo, Date dataEvento, String descrizione, TipoEvento tipoEvento, int numeroMaxPartecipanti) {
+    public Evento(String titolo, LocalDate dataEvento, String descrizione, TipoEvento tipoEvento, int numeroMaxPartecipanti) {
         this.titolo = titolo;
         this.dataEvento = dataEvento;
         this.descrizione = descrizione;
@@ -52,11 +52,11 @@ public class Evento {
         this.titolo = titolo;
     }
 
-    public Date getDataEvento() {
+    public LocalDate getDataEvento() {
         return dataEvento;
     }
 
-    public void setDataEvento(Date dataEvento) {
+    public void setDataEvento(LocalDate dataEvento) {
         this.dataEvento = dataEvento;
     }
 
